@@ -1,15 +1,14 @@
 body {
     background-color: #0c0c1d;
+    margin: 0;
+    padding: 0;
 }
-
-
 
 .box {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
-
+    min-height: 100vh;
 }
 
 .semi-box {
@@ -17,39 +16,36 @@ body {
     align-items: center;
     justify-content: center;
     background-color: #201e34;
-    width: 1000px;
-
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .text span {
-    color: #5b3274;
+    color: #9957c2;
 }
 
 .text {
     padding: 20px;
+    text-align: center;
 }
 
 .text h1 {
-    text-align: center;
-    letter-spacing: 1px;
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: bold;
-    color: rgb(161, 168, 168);
+    color: rgb(248, 243, 243);
+    margin-bottom: 1rem;
 }
 
 .text p {
     color: rgb(167, 171, 175);
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 1px;
-
+    font-size: 1rem;
 }
 
 .numbrs {
     display: flex;
     justify-content: space-around;
     align-items: center;
-
 }
 
 .numbrs h2 {
@@ -57,20 +53,18 @@ body {
 }
 
 .numbrs p {
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
 .img-content {
     position: relative;
     width: 100%;
-    height: 100%;
-
+    height: auto;
 }
 
 img {
     width: 100%;
-    height: 100%;
-
+    height: auto;
 }
 
 .color-overlay {
@@ -82,4 +76,38 @@ img {
     background-color: rgba(223, 64, 154, 0.5);
 }
 
-/* jyguystgdc */
+/* Media Query for smaller screens */
+@media only screen and (max-width: 768px) {
+    .box {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    .semi-box {
+        flex-direction: column;
+        flex-direction: column-reverse;
+        border: 2px;
+        border-radius: 10px;
+    }
+
+    img {
+        border-radius: 10px;
+    }
+
+    .color-overlay {
+        border-radius: 10px;
+    }
+
+    .text {
+        padding: 10px;
+    }
+
+    .text h1 {
+        font-size: 25px;
+    }
+
+
+    .numbrs {
+        flex-direction: column;
+    }
+}
